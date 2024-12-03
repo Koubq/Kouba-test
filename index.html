@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kouba - Jumping Ball</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+
+        #container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .kouba {
+            position: absolute;
+            bottom: 50px;
+            width: 100px;
+            height: 100px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            animation: jump 2s infinite ease-in-out;
+        }
+
+        @keyframes jump {
+            0%, 100% {
+                bottom: 50px;
+                transform: scale(1);
+            }
+            50% {
+                bottom: 300px;
+                transform: scale(1.2);
+            }
+        }
+
+        .name-tag {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="name-tag">Kouba - Algerian Jumping Ball</div>
+        <div class="kouba"></div>
+    </div>
+</body>
+</html>
